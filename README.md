@@ -1,6 +1,11 @@
 # CTFチートシート
 ## XSS
-通常
+通常バージョン
+```javascript:XSS
+<script>
+  alert(document.cookies);
+</script>
+```
 ## SSTI:
 問題にどこにファイルがあるかわからない時には
 ```Python:SSTI_ls
