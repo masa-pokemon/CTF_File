@@ -1,6 +1,5 @@
 # CTFチートシート
 ## 目次
-- Table of Content
 {:toc}
 
 ## XSS
