@@ -45,7 +45,7 @@ for i in range(100):
     print(1)
   print(2)
 ```
-実行方法:```shellscript:python
+実行方法:```
 python n_input || 入力を自動化したいもの
 ```
 
