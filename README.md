@@ -31,3 +31,21 @@ SSTIができる時には、
 ' OR 1=1 --
 ```
 を試してみる
+
+---
+## Crypto問
+**https://gchq.github.io/CyberChef/** がいい
+
+---
+## おまけ
+n回後にmを入力するのを繰り返しするためのコード
+```python:n_input
+for i in range(100):
+  for j in range(200):
+    print(1)
+  print(2)
+```
+実行方法:```shellscript:python
+python n_input || 入力を自動化したいもの
+```
+
